@@ -30,3 +30,5 @@ def add_student(request):
         return redirect("/student/std/")
     
     return render(request, "student/add_student.html")
+
+# This is Me, Your Death
