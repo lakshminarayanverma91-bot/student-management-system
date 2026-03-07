@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Model</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+<div class="bg-white p-8 rounded-xl shadow-lg w-full max-w-2xl">
+
+    <h2 class="text-3xl font-bold text-center mb-6">Student Form</h2>
+
+    <form method="POST" action="" class="space-y-5">
+
+        {% csrf_token %}
+
+        <!-- Model Name -->
+        <div>
+            <label class="block mb-1 font-medium">Student Name</label>
+            <input type="text" name="input_name" placeholder="Enter your name"
+            class="w-full border p-2 rounded-lg focus:ring-2 focus:ring-blue-400" required>
+        </div>
+
+        <!-- College -->
+        <div>
+            <label class="block mb-1 font-medium">College</label>
+            <input type="text" name="input_college" placeholder="Enter your college"
+            class="w-full border p-2 rounded-lg focus:ring-2 focus:ring-blue-400" required>
+        </div>
+
+        <!-- Course -->
+        <div>
+            <label class="block mb-1 font-medium">Course</label>
+            <input type="text" name="input_course" placeholder="Enter your course"
+            class="w-full border p-2 rounded-lg focus:ring-2 focus:ring-blue-400" required>
+        </div>
+
+        <!-- Phone -->
+        <div>
+            <label class="block mb-1 font-medium">Phone Number</label>
+            <input type="tel" name="input_phone" placeholder="Enter your phone number"
+            class="w-full border p-2 rounded-lg focus:ring-2 focus:ring-blue-400" required>
+        </div>
+
+        <!-- Email -->
+        <div>
+            <label class="block mb-1 font-medium">Email</label>
+            <input type="email" name="input_email" placeholder="Enter your email"
+            class="w-full border p-2 rounded-lg focus:ring-2 focus:ring-blue-400" required>
+        </div>
+
+        <!-- Gender -->
+        <div>
+            <label class="block mb-2 font-medium">Gender</label>
+
+            <label class="mr-4">
+                <input type="radio" name="input_gender" value="Male"> Male
+            </label>
+
+            <label class="mr-4">
+                <input type="radio" name="input_gender" value="Female"> Female
+            </label>
+
+            <label>
+                <input type="radio" name="input_gender" value="Other"> Other
+            </label>
+        </div>
+
+        <!-- Year -->
+        <div>
+            <label class="block mb-1 font-medium">Year</label>
+
+            <select name="input_year"
+            class="w-full border p-2 rounded-lg focus:ring-2 focus:ring-blue-400" required>
+
+                <option value="">Select Year</option>
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+
+            </select>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit"
+        class="w-full bg-blue-500 text-white py-2 rounded-lg hover:bg-blue-600 transition">
+            Submit
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>
