@@ -9,7 +9,7 @@
 
 <body class="bg-gray-100 min-h-screen p-10">
 
-  <h1 class="text-3xl font-bold text-center mb-10">Student Management</h1>
+  <h1 class="text-3xl font-bold text-center mb-10">Student Management System</h1>
 
   <!-- Cards Container -->
   <div class="grid md:grid-cols-3 gap-8">
@@ -24,8 +24,8 @@
         <p class="text-gray-600 mb-4">Phone: {{ student.phone_no }}</p>
 
         <div class="flex justify-center gap-2">
-            <button class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Update</button>
-            <button class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Delete</button>
+            <a href="{% url 'update_student' student.id %}" class="bg-blue-500 text-white px-3 py-1 rounded hover:bg-blue-600">Update</a>
+            <a href="{% url 'delete_student' student.id %}" class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">Delete</a>
         </div>
         </div>
     {% endfor %}
